@@ -1,0 +1,48 @@
+
+
+
+.head-bg{background: #01b1da;height: 90px;position: relative;}
+.head{}
+.head .logo{position: absolute;bottom: 0;float: left;}
+
+.navbar-header{position: relative;}
+.navbar-header .navbar-brand{bottom: -82px;position: absolute;}
+.navbar-default{background: none;border-color: transparent;}
+.navbar-default .navbar-nav>li{line-height: 90px;}
+.navbar-default .navbar-nav>li>a{color: #FFF;line-height: 50px;padding: 39px 20px 0 20px;font-size: 14px;}
+.navbar-default .navbar-nav>li>a:hover{background: #8fd13f;color: #FFF;}
+.navbar-default .navbar-nav>li.cur{background: #8fd13f;}
+.navbar-default .navbar-text{color: #FFF;padding-top: 36px;}
+.navbar-default .navbar-text a{color: #FFF;font-size: 14px;}
+.navbar-default .navbar-text a:hover{color: #8fd13f;}
+
+
+.swiper-container{width: 100%;height: 496px;margin-left: auto;margin-right: auto;}
+.gallery-top .swiper-slide{text-align: center;font-size: 18px;display: -webkit-box;display: -ms-flexbox;display: -webkit-flex;display: flex;-webkit-box-pack: center;-ms-flex-pack: center;-webkit-justify-content: center;justify-content: center;-webkit-box-align: center;-ms-flex-align: center;-webkit-align-items: center;align-items: center;}
+.gallery-thumbs,.swiper-thumb{background: #8fd13f;width: 100%;height: 138px;color: #FFF;}
+.gallery-thumbs .swiper-wrapper{background: #8fd13f;}
+.gallery-thumbs .swiper-wrapper .swiper-slide{width: 25%;position: relative;}
+.gallery-thumbs .swiper-wrapper .swiper-slide h3{font-size: 20px;width: 100%;}
+.gallery-thumbs .swiper-wrapper .swiper-slide p{font-size: 13px;width: 100%;}
+.swiper-thumb .swiper-container{overflow: visible;}
+.gallery-thumbs .swiper-wrapper i{display: none;}
+.gallery-thumbs .swiper-wrapper .active i{background: url(../images/swiper-slide-active.png) center no-repeat;width: 41px;height: 26px;display: block;position: absolute;top: -26px;z-index: 99999;left: 20%;}
+
+.content-c,.index-product{padding: 50px 0;}
+.title{}
+.title .t-1{font-size: 45px;}
+.title .t-2{font-size: 30px;}
+/*解决方案*/
+.index-solution .item{border: 1px solid #8fd13f;}
+.index-solution .item .t{font-size: 30px;padding: 20px 0 20px 20px;color: #44a300;}
+.index-solution .item .img img{max-width: 100%;}
+.index-solution .item .text{padding: 20px;}
+.index-solution .item .text p{font-size: 18px;color: #696969;}
+.index-solution .item .text a{display: block;background: #8fd13f;color: #44a300;float: left;padding:2px 5px;}
+/*产品 · 研发*/
+.index-product{background: #f1f1f1;}
+
+
+@media (min-width: 768px){
+	.navbar{border-radius: 0;}
+}

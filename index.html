@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link href="css/css.css" rel="stylesheet" type="text/css" />
+<link href="http://cdn.bootcss.com/Swiper/3.4.2/css/swiper.css" rel="stylesheet">
+<link href="http://cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script src="http://cdn.bootcss.com/jquery/2.2.0/jquery.min.js"></script>
+<script src="http://cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="http://cdn.bootcss.com/Swiper/3.4.2/js/swiper.jquery.js"></script>
+</head>
+<body>
+
+    <div class="swiper-container gallery-top">
+        <div class="swiper-wrapper" >
+            <div class="swiper-slide swiper-slide-active active"><img src="http://www.ecotechcn.com/uploadfile/2017/0428/20170428054113604.jpg"></div>
+            <div class="swiper-slide"><img src="http://www.ecotechcn.com/uploadfile/2017/0428/20170428054130470.jpg"></div>
+            <div class="swiper-slide"><img src="http://www.ecotechcn.com/uploadfile/2017/0428/20170428054143199.jpg"></div>
+            <div class="swiper-slide"><img src="http://www.ecotechcn.com/uploadfile/2017/0428/20170428054155779.jpg"></div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <div class="swiper-thumb">
+    <div class="container">
+    <div class="swiper-container gallery-thumbs">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide active">
+                <i></i>
+                <h3>全球首创 有机硅合成革</h3>
+                <p>无致癌成分、与人体具有亲和性，<br>做到婴儿安全防护。</p>
+            </div>
+            <div class="swiper-slide">
+                <i></i>
+                <h3>坚实的实验平台</h3>
+                <p>无致癌成分、与人体具有亲和性，<br>做到婴儿安全防护。</p>
+            </div>
+            <div class="swiper-slide">
+                <i></i>
+                <h3>全球首创 有机硅合成革</h3>
+                <p>无致癌成分、与人体具有亲和性，<br>做到婴儿安全防护。</p>
+            </div>
+            <div class="swiper-slide">
+                <i></i>
+                <h3>坚实的实验平台</h3>
+                <p>无致癌成分、与人体具有亲和性，<br>做到婴儿安全防护。</p>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    <script>
+    var galleryThumbs = document.querySelector('.gallery-thumbs');
+    var swiperSlideList = galleryThumbs.querySelectorAll('.swiper-slide');
+    var galleryTop = new Swiper('.gallery-top', {
+        pagination: '.swiper-pagination',
+        direction: 'vertical',
+        slidesPerView: 1,
+        paginationClickable: true,
+        spaceBetween: 0,
+        autoplay: 3000,
+        loop: true,
+        onSlideChangeEnd: function(swiper){
+            console.log(swiper.activeIndex);
+            $(swiperSlideList).removeClass('active');
+            $(swiperSlideList[swiper.activeIndex - 1]).addClass('active');
+            if (swiper.activeIndex == 5) {
+                $(swiperSlideList[0]).addClass('active');
+            }
+        }    
+    });
+    galleryTop.params.control = galleryThumbs;
+    	for(var i = 0;i<swiperSlideList.length;i++){
+		swiperSlideList[i].index = i;
+		swiperSlideList[i].onclick = function(){
+            $('.swiper-slide').removeClass('active');
+			galleryTop.slideTo(this.index + 1,1000,false)
+			$(this).addClass('active');
+		}
+	}
+    </script>
+
+<!-- END产品 · 研发 -->
+</body>
+</html>
